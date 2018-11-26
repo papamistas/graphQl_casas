@@ -11,7 +11,7 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
   name: 'app',
   data () {
@@ -23,7 +23,7 @@ export default {
     async getLanguage () {
       try {
         const res = await axios.post(
-          'http://localhost:4000/graphql', {
+          'http://localhost:7000/graphql', {
           query: `{
     casas {
       cod_casa
