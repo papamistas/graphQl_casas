@@ -17,8 +17,13 @@
                     <template v-for="(item, index) in casas2">
                         <v-list-tile :key="index" avatar ripple>
                             <v-list-tile-content>
-                                <v-list-tile-title>{{ item.cod_casa }}</v-list-tile-title>
+                                <v-list-tile-title><a :href="'/alojamento/' + item.cod_casa">{{ item.cod_casa }}</a></v-list-tile-title>
+
+                                <router-link tag="tr" :to="'/about'">{{ item.cod_casa }}</router-link>
+
+                                <v-list-tile-sub-title class="text--primary">{{ item.titulo }}</v-list-tile-sub-title>
                                 <v-list-tile-sub-title class="text--primary">{{ item.designacao }}</v-list-tile-sub-title>
+                                <v-list-tile-sub-title class="text--primary">{{ item.seo_title }}</v-list-tile-sub-title>
                             </v-list-tile-content>
                             <v-list-tile-action>
                                 <template v-for="(per, i) in item.periodos">

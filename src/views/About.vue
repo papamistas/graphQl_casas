@@ -53,10 +53,6 @@
         </div>
 
 
-
-
-
-
         <hr>
     </div>
 </template>
@@ -76,7 +72,7 @@
 
         data() {
             return {
-                casas: this.casas
+                casas: this.$store.casas
             }
         },
         /*created() {
@@ -95,6 +91,8 @@
       designacao
       destino
       destino_complex
+      titulo
+          seo_title
         periodos {
           id 
           inicio
@@ -112,7 +110,8 @@
 
                         })
                     this.casas = res.data.data.casas;
-                    Results.$forceUpdate();
+                    //Results.$forceUpdate();
+                    this.$store.casas = this.casas
                 } catch (e) {
                     console.log('err', e)
                 }
