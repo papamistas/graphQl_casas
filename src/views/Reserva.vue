@@ -2,6 +2,9 @@
 
 <template>
   <div id="app">
+<advanced-search></advanced-search>
+    <Search/>
+
     <h3>Example 1</h3>
     <div>
       Data: {{ example1 }}
@@ -12,8 +15,14 @@
 </template>
 <script>
 import axios from "axios";
+import Search from "../components/Search";
+import AdvancedSearch from "../components/AdvancedSearch/AdvancedSearch";
 export default {
   name: 'app',
+  components: {
+    AdvancedSearch,
+    Search: Search
+  },
   data () {
     return {
       example1: ''

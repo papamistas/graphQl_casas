@@ -30,6 +30,33 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "reserva" */ "./views/Reserva.vue")
+    },
+    {
+      path: "/contacts",
+      name: "contacts",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+          import(/* webpackChunkName: "about" */ "./views/Contacts.vue")
+    },
+    {
+      path: "/compare",
+      name: "compare",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+          import(/* webpackChunkName: "reserva" */ "./views/Compare.vue")
+    },
+    {
+      path: "/favourites",
+      name: "favourites",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+          import(/* webpackChunkName: "reserva" */ "./views/Favourites.vue")
     }
   ]
 });
