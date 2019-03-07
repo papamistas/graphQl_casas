@@ -3,52 +3,60 @@
         <AdvancedSearch/>
         <Search/>
         <h3>Example 1</h3>
-        <Results v-bind:casas="this.casas"></Results>
+        <v-btn @click="getLanguage" color="success">Success</v-btn>
 
-        <div>
+        <div v-if="casas">
+            <Results v-bind:casas="this.casas"></Results>
+
+            <div>
 
 
-            <div id="results">
-                <div v-for="casa in casas">
+                <div id="results">
+                    <div v-for="casa in casas">
                     <span>
                         {{ casa.cod_casa }}
                         </span>
-                    <span>
+                        <span>
                         {{ casa.designacao }}
                         </span>
-                    <span>
+                        <span>
                         {{ casa.destino_complex }}
                         </span>
 
-                    <div v-for="periodo in casa.periodos">
+                        <div v-for="periodo in casa.periodos">
                         <span>
                         {{ periodo.inicio }}
                         </span>
-                        <span>
+                            <span>
                         {{ periodo.fim }}
                         </span>
-                        <span>
+                            <span>
                         {{ periodo.precoSemana }}
                         </span>
-                    </div>
-                    <div v-for="feedback in casa.feedbacks">
+                        </div>
+                        <div v-for="feedback in casa.feedbacks">
                         <span>
                         {{ feedback.inicio }}
                         </span>
-                        <span>
+                            <span>
                         {{ feedback.fim }}
                         </span>
-                        <span>
+                            <span>
                         {{ feedback.precoSemana }}
                         </span>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
 
-        <button @click="getLanguage">Get Language</button>
+
+
+
+
+
         <hr>
     </div>
 </template>
@@ -67,14 +75,15 @@
         },
 
         data() {
-
             return {
                 casas: this.casas
             }
         },
-        created() {
+        /*created() {
+            this.rand = Math.round(Math.random() * 1000)
             this.getLanguage()
-        },
+        },*/
+
         methods: {
             async getLanguage() {
                 try {
@@ -102,7 +111,8 @@
 }`
 
                         })
-                    this.casas = res.data.data.casas
+                    this.casas = res.data.data.casas;
+                    Results.$forceUpdate();
                 } catch (e) {
                     console.log('err', e)
                 }
