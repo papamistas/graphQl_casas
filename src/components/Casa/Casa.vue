@@ -1,6 +1,8 @@
 <template>
     <div class="Casa">
         CASA scrollspy???
+        <span>{{ casa.titulo }}</span>
+
         <CasaImages></CasaImages>
 <CasaDocs></CasaDocs>
     </div>
@@ -15,7 +17,7 @@
            CasaImages,
             CasaDocs
         },
-        props: {
-        },
+
+        props: ['casa'],
     };
 </script>

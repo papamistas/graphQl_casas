@@ -19,7 +19,7 @@
                             <v-list-tile-content>
                                 <v-list-tile-title><a :href="'/alojamento/' + item.cod_casa">{{ item.cod_casa }}</a></v-list-tile-title>
 
-                                <router-link tag="Casa" :to="'/Casa'">{{ item.cod_casa }}</router-link>
+                                <router-link :to="{ name: 'casa', params: {casa: item ,codCasa:item.cod_Casa} }">{{ item.cod_casa }}</router-link>
 
                                 <v-list-tile-sub-title class="text--primary">{{ item.titulo }}</v-list-tile-sub-title>
                                 <v-list-tile-sub-title class="text--primary">{{ item.designacao }}</v-list-tile-sub-title>
