@@ -19,10 +19,11 @@
                             <v-list-tile-content>
                                 <v-list-tile-title>{{ item.cod_casa }}</v-list-tile-title>
                                 <v-list-tile-sub-title class="text--primary">{{ item.designacao }}</v-list-tile-sub-title>
-                                <v-list-tile-sub-title>{{ item.subtitle }}</v-list-tile-sub-title>
                             </v-list-tile-content>
                             <v-list-tile-action>
-                                <v-list-tile-action-text>{{ item.action }}</v-list-tile-action-text>
+                                <template v-for="(per, i) in item.periodos">
+                                <v-list-tile-action-text>{{ per.inicio }}</v-list-tile-action-text>
+                                </template>
                                 <v-icon color="grey lighten-1">star_border</v-icon>
                             </v-list-tile-action>
                         </v-list-tile>
