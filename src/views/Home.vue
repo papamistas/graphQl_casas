@@ -15,7 +15,7 @@
     import AdvancedSearch from "../components/AdvancedSearch/AdvancedSearch";
     import Results from "../components/Results/Results";
     import QuickSearch from "../components/QuickSearch/QuickSearch";
-
+    import Casa from "../components/Casa/Casa";
     export default {
         name: "home",
 
@@ -24,7 +24,8 @@
             AdvancedSearch,
             Search,
             HelloWorld,
-            QuickSearch
+            QuickSearch,
+            Casa
         },
 
     };

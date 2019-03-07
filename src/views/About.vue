@@ -67,7 +67,7 @@
         components: {
             Results,
             AdvancedSearch,
-            Search: Search
+            Search
         },
 
         data() {
