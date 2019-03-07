@@ -4,7 +4,7 @@
 <template>
     <div>
         <input type="text"/>
-        <button @click="getLanguage">Search22244</button>
+        <button @click="getLanguage">Search</button>
     </div>
 
 </template>

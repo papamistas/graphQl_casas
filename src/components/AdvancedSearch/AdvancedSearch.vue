@@ -1,7 +1,5 @@
 <template>
     <div class="AdvancedSearch">
-        <pre v-text="$attrs"/>
-        <span class="testecss">twttwe</span>
         <div class="col-xs-12 col-md-2 col-lg-2 searchBar ">
             <div class="panel panel-info sh">
                 <div class="panel-heading">

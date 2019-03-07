@@ -1,8 +1,10 @@
 <template>
     <div id="app">
-<AdvancedSearch/>
+        <AdvancedSearch/>
         <Search/>
         <h3>Example 1</h3>
+        <Results v-bind:casas="this.casas"></Results>
+
         <div>
 
 
@@ -45,6 +47,7 @@
             </div>
 
         </div>
+
         <button @click="getLanguage">Get Language</button>
         <hr>
     </div>
@@ -53,19 +56,23 @@
     import axios from 'axios';
     import Search from "../components/Search";
     import AdvancedSearch from "../components/AdvancedSearch/AdvancedSearch";
+    import Results from "../components/Results/Results";
 
     export default {
         name: 'app',
         components: {
+            Results,
             AdvancedSearch,
-Search: Search
+            Search: Search
         },
+
         data() {
+
             return {
                 casas: this.casas
             }
         },
-        created(){
+        created() {
             this.getLanguage()
         },
         methods: {
