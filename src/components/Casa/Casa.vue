@@ -1,10 +1,11 @@
 <template v-if="codCasa">
     <div class="Casa">
+
         CASA scrollspy???
         <span>{{ codCasa }}</span>
 
         <CasaImages></CasaImages>
-        <span>{{ casa.titulo }}</span>
+        <span>{{ casa.seoTitle }}</span>
 <CasaDocs></CasaDocs>
     </div>
 </template>
@@ -19,6 +20,6 @@
             CasaDocs
         },
 
-        props: ['codCasa','casa'],
+        props: ['codCasa','seoTitle','casa'],
     };
 </script>

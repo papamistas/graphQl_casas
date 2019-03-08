@@ -18,15 +18,20 @@
                         <v-list-tile :key="index" avatar ripple>
                             <v-list-tile-content>
 
-                                <router-link :to="{name:'casa',  params: {codCasa: item.cod_casa ,casa:item} }" target="_blank">{{ item.cod_casa }}</router-link>
+                                <router-link
+                                        :to="{name:'casa',  params: {codCasa: item.cod_casa ,seoTitle:item.seoTitle,casa:item} }">
+                                    {{ item.cod_casa }}
+                                </router-link>
 
                                 <v-list-tile-sub-title class="text--primary">{{ item.titulo }}</v-list-tile-sub-title>
-                                <v-list-tile-sub-title class="text--primary">{{ item.designacao }}</v-list-tile-sub-title>
-                                <v-list-tile-sub-title class="text--primary">{{ item.seo_title }}</v-list-tile-sub-title>
+                                <v-list-tile-sub-title class="text--primary">{{ item.designacao }}
+                                </v-list-tile-sub-title>
+                                <v-list-tile-sub-title class="text--primary">{{ item.seo_title }}
+                                </v-list-tile-sub-title>
                             </v-list-tile-content>
                             <v-list-tile-action>
                                 <template v-for="(per, i) in item.periodos">
-                                <v-list-tile-action-text>{{ per.inicio }}</v-list-tile-action-text>
+                                    <v-list-tile-action-text>{{ per.inicio }}</v-list-tile-action-text>
                                 </template>
                                 <v-icon color="grey lighten-1">star_border</v-icon>
                             </v-list-tile-action>
@@ -53,7 +58,8 @@
 
             return {
                 casas2: this.casas,
-                codCasa:null
+                codCasa: null,
+                seoTitle:null
             }
         },
     };

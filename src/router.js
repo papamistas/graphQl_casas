@@ -14,7 +14,7 @@ export default new Router({
       component: Home
     },
     {
-      path: "/casa/:codCasa",
+      path: "/casa/:codCasa/:seoTitle",
       name: "casa",
 
       component: () =>

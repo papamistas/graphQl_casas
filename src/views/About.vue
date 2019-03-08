@@ -92,7 +92,7 @@
       destino
       destino_complex
       titulo
-          seo_title
+          seoTitle
         periodos {
           id 
           inicio

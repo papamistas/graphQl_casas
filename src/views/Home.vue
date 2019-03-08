@@ -4,7 +4,12 @@
         <div v-if="this.$store.casas">
             <Results v-bind:casas="this.$store.casas"></Results>
         </div>
+        <Signin></Signin>
+        <hr>
+        <hr>
+        <Signup></Signup>
         <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <
     </div>
 </template>
 
@@ -16,6 +21,8 @@
     import Results from "../components/Results/Results";
     import QuickSearch from "../components/QuickSearch/QuickSearch";
     import Casa from "../components/Casa/Casa";
+    import Signin from "../components/Signin/Signin";
+    import Signup from "../components/Signup/Signup";
     export default {
         name: "home",
 
@@ -25,7 +32,10 @@
             Search,
             HelloWorld,
             QuickSearch,
-            Casa
+            Casa,
+            Signin,
+            Signup
+
         },
 
     };
