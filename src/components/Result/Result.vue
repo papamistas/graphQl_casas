@@ -18,7 +18,7 @@
                         <v-list-tile :key="index" avatar ripple>
                             <v-list-tile-content>
 
-                                <router-link :to="{name:'casa',  params: {codCasa: item.cod_casa ,casa:item} }">{{ item.cod_casa }}</router-link>
+                                <router-link :to="{name:'casa',  params: {codCasa: item.cod_casa ,casa:item} }" target="_blank">{{ item.cod_casa }}</router-link>
 
                                 <v-list-tile-sub-title class="text--primary">{{ item.titulo }}</v-list-tile-sub-title>
                                 <v-list-tile-sub-title class="text--primary">{{ item.designacao }}</v-list-tile-sub-title>

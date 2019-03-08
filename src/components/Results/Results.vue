@@ -1,6 +1,6 @@
 <template>
     <div class="Results">
-        <Result v-bind:casas="this.casas23"></Result>
+        <Result v-bind:casas="casasRes"></Result>
     </div>
 </template>
 
@@ -13,7 +13,7 @@
         data() {
 
             return {
-                casas23: this.casas
+                casasRes: this.casas
             }
         },
         created: function () {
