@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div>
         <AdvancedSearch/>
         <Search/>
         <h3>Example 1</h3>

@@ -1,6 +1,26 @@
 <template>
     <div>
-<QuickSearch></QuickSearch>
+
+        <QuickSearch></QuickSearch>
+
+        <a href="http://localhost:7000/auth/facebook">Login with Facebook</a>
+        <a href="http://localhost:7000/auth/google">Login with google</a>
+
+        <button v-on:click="signinFb">login FB</button>
+        <NavBar></NavBar>
+        <form action="http://localhost:7000/auth/login" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username"/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" value="Log In"/>
+            </div>
+        </form>
         <div v-if="this.$store.casas">
             <Results v-bind:casas="this.$store.casas"></Results>
         </div>
@@ -9,7 +29,7 @@
         <hr>
         <Signup></Signup>
         <HelloWorld msg="Welcome to Your Vue.js App"/>
-        <
+
     </div>
 </template>
 
@@ -25,7 +45,6 @@
     import Signup from "../components/Signup/Signup";
     export default {
         name: "home",
-
         components: {
             Results,
             AdvancedSearch,
@@ -34,9 +53,16 @@
             QuickSearch,
             Casa,
             Signin,
-            Signup
-
+            Signup,
         },
+        methods:{
+            signinFb: function (event) {
+                debugger;
+               this.$http
+                    .post('localhost:7000/auth/facebook')
+                    .then(response => (this.info = response))
+            }
+        }
 
     };
 </script>

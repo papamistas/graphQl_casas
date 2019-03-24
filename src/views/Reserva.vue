@@ -1,7 +1,7 @@
 
 
 <template>
-  <div id="app">
+  <div>
 <advanced-search></advanced-search>
     <Search/>
 

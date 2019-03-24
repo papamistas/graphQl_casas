@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div>
         <h3>COMPAREE</h3>
         <Search></Search>
         <div>

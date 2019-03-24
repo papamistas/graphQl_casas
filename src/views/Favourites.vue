@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div>
         <h3>FAVOURITES</h3>
         <Search></Search>
         <div>
