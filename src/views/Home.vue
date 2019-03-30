@@ -58,7 +58,7 @@
             signinFb: function (event) {
                 debugger;
                this.$http
-                    .post('/auth/facebook',{ crossdomain: true })
+                    .get('/auth/facebook',{ crossdomain: true })
                     .then(response => (this.info = response))
             }
         }
