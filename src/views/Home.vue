@@ -3,12 +3,11 @@
 
         <QuickSearch></QuickSearch>
 
-        <a href="http://localhost:7000/auth/facebook">Login with Facebook</a>
-        <a href="http://localhost:7000/auth/google">Login with google</a>
+        <a href="/auth/facebook">Login with Facebook</a>
+        <a href="/auth/google">Login with google</a>
 
         <button v-on:click="signinFb">login FB</button>
-        <NavBar></NavBar>
-        <form action="http://localhost:7000/auth/login" method="post">
+        <form action="/auth/login" method="post">
             <div>
                 <label>Username:</label>
                 <input type="text" name="username"/>
@@ -59,7 +58,7 @@
             signinFb: function (event) {
                 debugger;
                this.$http
-                    .post('localhost:7000/auth/facebook')
+                    .post('/auth/facebook',{ crossdomain: true })
                     .then(response => (this.info = response))
             }
         }

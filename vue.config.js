@@ -12,7 +12,7 @@ module.exports = {
         changeOrigin: true
       },
       '^/foo': {
-        target: 'casasdapraia.com'
+        target: 'http://casasdapraia.com'
       }
     }
   },

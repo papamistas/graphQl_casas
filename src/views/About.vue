@@ -21,7 +21,7 @@
                         </span>
                         <span>
                         {{ casa.destino_complex }}
-                        </span>
+            </span>
 
                         <div v-for="periodo in casa.periodos">
                         <span>
@@ -83,8 +83,7 @@
         methods: {
             async getLanguage() {
                 try {
-                    const res = await axios.post(
-                        'http://localhost:7000/graphql', {
+        const res = await axios.post("http://localhost:7000/graphql", {
                             query: `{
     casas {
       cod_casa
